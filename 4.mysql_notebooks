@@ -46,5 +46,6 @@ RUN BELOW COMMANDS IN JUPYTER NOTEBOOKS::=
 %load_ext sql
 %sql mysql+mysqlconnector://root:root@localhost/test
 
+        ((%sql dialect+driver://username:password@host/database_name)-->uname pw is from workbench sql installation)
 %%sql
 show databases;
