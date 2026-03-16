@@ -13,6 +13,23 @@ python -m venv env
 
 env\Scripts\activate
 
+              ╔══════════════════════════════════════════════════════════════════════════════════════╗
+              ║                                                                                      ║
+              ║  env\Scripts\activate : File D:\Courses\Mysql\sql_notebook\env\Scripts\              ║
+              ║  Activate.ps1 cannot be loaded because running scripts is disabled on this           ║
+              ║  system. For more information, see about_Execution_Policies at                       ║
+              ║  https:/go.microsoft.com/fwlink/?LinkID=135170.                                      ║
+              ║                                                                                      ║
+              ║  At line:1 char:1                                                                    ║
+              ║  + env\Scripts\activate                                                              ║
+              ║  + ~~~~~~~~~~~~~~~~~~~~                                                              ║
+              ║      + CategoryInfo          : SecurityError: (:) [], PSSecurityException            ║
+              ║      + FullyQualifiedErrorId : UnauthorizedAccess                                    ║  
+              ║~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~║
+              ║ If this error persists then run below command                                        ║
+              ║       Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser           ║
+              ╚══════════════════════════════════════════════════════════════════════════════════════╝
+
 pip install --upgrade pip
 
 pip install notebook
@@ -25,6 +42,7 @@ pip install mysql-connector-python
 
 jupyter notebook
 
+RUN BELOW COMMANDS IN JUPYTER NOTEBOOKS::=
 %load_ext sql
 %sql mysql+mysqlconnector://root:root@localhost/test
 
